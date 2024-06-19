@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    align-content: center;
+}
+
+.welcome {
+    display: block;
+    text-align: center;
+}
+
+.summary{
+    width: 50%;
+}
+.marsimgs{
+    /* width: 50%; */
+    border: solid red 2px;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+
+}
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+}
+
+.apod {
+    /* border: solid red 2px; */
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.explain {
+    min-width: 50%;
+}
+
+.apodImg {
+    min-width: 50%;
+    margin-left: 2rem;
+}
+.weather {
+    border: solid blue 2px;
+    text-align: center;
+    padding: 2rem;
+    height: 50%;
+}
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.gal {
+    /* border: solid orange 2px; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    overflow-x: scroll;
+    width: 50%;
+}
+
+.rvrimgs {
+    margin: 0 1rem;
+}
+

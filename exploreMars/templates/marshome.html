@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30004c4ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/marshome.css' %}">
+</head>
+
+<body>
+
+
+    <div class="welcome">
+        <h1>WELCOME TO MARS</h1>
+    </div>
+
+
+
+                <!-- MARS IMAGES -->
+                <div class="marsimgs">
+                    <!-- <h1>Recent Photos From The Curiosity Rover!</h1> -->
+                    <div class="summary">
+                        <h1>Mars Rovers</h1>
+                        <p>This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists. 
+                            This API is maintained by Chris Cerami.
+                            Each rover has its own set of photos stored in the database, which can be queried separately.</p>
+                    </div>
+                    <div class="gal">
+                        {% for photo in photos %}
+                        <div class="rvrimgs">
+                            <p>{{photo.sol}}</p>
+                            <p>{{photo.camera.full_name}}</p>
+                            <img src={{photo.img_src}} max-height="100%" width="auto" alt="">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                            <!--^^^^ MARS IMAGES ^^^^-->
+
+
+
+
+            <!-- WEATHER  -->
+    <div class="weather scroller ">
+
+        <h1>Weather from the most recent sols!</h1>
+        <h2>from the Curiosity rover!</h2><br>
+        <div class="data">
+            {% for sol in weather %}
+            <div class="weatherdiv">
+                <div class="weatherinfo">
+                    <h3>Sol:{{sol.sol}}</h3>
+                    <p>Earth Date: {{sol.terrestrial_date}}</p>
+                    <p>Max Temp: {{sol.max_temp}} C</p>
+                    <p>Min Temp: {{sol.min_temp}} C</p>
+                </div>
+            </div>
+            {% endfor %}
+    </div>
+                <!--^^^^ WEATHER ^^^^ -->
+
+
+
+
+</body>
+
+</html>
