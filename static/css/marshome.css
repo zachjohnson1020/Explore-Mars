@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -11,71 +11,181 @@ body {
     background-color: white;
     color: black;
     align-content: center;
-}
-
-.welcome {
-    display: block;
-    text-align: center;
-}
-
-.summary{
-    width: 50%;
-}
-.marsimgs{
-    /* width: 50%; */
-    border: solid red 2px;
-    justify-content: center;
-    display: flex;
     height: 100%;
-
-}
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-
 }
 
-.apod {
-    /* border: solid red 2px; */
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.explain {
-    min-width: 50%;
+html {
+    --scrollbarBG: #acacac;
+    --thumbBG: #90A4AE;
+    height: 100%;
 }
 
-.apodImg {
-    min-width: 50%;
-    margin-left: 2rem;
-}
-.weather {
-    border: solid blue 2px;
-    text-align: center;
-    padding: 2rem;
-    height: 50%;
-}
-.data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3rem;
+body::-webkit-scrollbar {
+    width: 11px;
 }
 
-.gal {
-    /* border: solid orange 2px; */
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    overflow-x: scroll;
-    width: 50%;
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
-.rvrimgs {
-    margin: 0 1rem;
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
 }
 
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+#toggleDark{
+    cursor: pointer;
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1025px) {
+
+    /* CSS */
+    .welcome {
+        display: block;
+        text-align: center;
+        margin: 20px;
+        height: 3%;
+    }
+
+    .summary {
+        width: 50%;
+        font-size: clamp(1px, 8vw, 3rem);
+    }
+
+    .marsimgs {
+        /* width: 50%; */
+        /* border: solid red 2px; */
+        justify-content: center;
+        display: flex;
+        height: 50%;
+        /* background-color: red; */
+    }
+
+
+    .apod {
+        /* border: solid red 2px; */
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .explain {
+        min-width: 50%;
+    }
+
+    .apodImg {
+        min-width: 50%;
+        margin-left: 2rem;
+    }
+
+    .weather {
+        /* background-color: blue; */
+        text-align: center;
+        padding: 2rem;
+        height: 47%;
+        margin-top: 5px;
+        font-size: clamp(.5rem, 8vw, 2rem);
+    }
+
+    .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3rem;
+
+    }
+
+    .gal {
+        /* border: solid orange 2px; */
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        overflow-x: scroll;
+        width: 50%;
+    }
+
+    .rvrimgs img {
+        max-width: 700px;
+        height: auto;
+        border-radius: 20px;
+
+    }
+
+    .sol {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        color: white;
+    }
+
+    .cam {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        color: white;
+    }
+
+    .rvrimgs {
+        position: relative;
+        text-align: center;
+        margin: 0 10px;
+    }
+
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* CSS */
+
+}
