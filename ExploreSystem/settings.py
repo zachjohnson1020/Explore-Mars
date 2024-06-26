@@ -30,7 +30,6 @@ SECRET_KEY = os.environ['SECRET_KEY'] # Instead of  actual secret key
 
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

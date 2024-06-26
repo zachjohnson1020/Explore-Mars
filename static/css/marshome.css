@@ -12,6 +12,10 @@ body {
     color: black;
     align-content: center;
     height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    overflow: hidden;
+    margin: 5px;
 }
 
 html {
@@ -20,14 +24,7 @@ html {
     height: 100%;
 }
 
-body::-webkit-scrollbar {
-    width: 11px;
-}
 
-body {
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
 
 body::-webkit-scrollbar-track {
     background: var(--scrollbarBG);
@@ -36,11 +33,91 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG);
     border-radius: 6px;
-    border: 3px solid var(--scrollbarBG);
 }
 
-#toggleDark{
+#toggleDark{    
     cursor: pointer;
+} 
+
+.sol {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+}
+
+.cam {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: white;
+}
+
+
+.welcome {
+    display: block;
+    text-align: center;
+    height: 3%;
+}
+    
+.summary {
+        width: 25%;
+        font-size: 1.2vw;
+    }
+.summary h1 {
+    font-size: 6vw;
+}
+
+.marsimgs {
+    /* width: 50%; */
+    /* border: solid red 2px; */
+    justify-content: center;
+    display: flex;
+    height: 50%;
+    /* background-color: red; */
+}
+
+.rvrimgs {
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rvrimgs img {
+    max-width: auto;
+    max-height: auto;
+    border-radius: 20px;
+}
+
+.weather {
+    /* background-color: blue; */
+    text-align: center;
+    padding: 1rem;
+    height: 47%;
+    margin: 1rem;
+    font-size: 1.5vw;
+}
+.weather h1 {
+    font-size: 2vw;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+.gal {
+    /* border: solid orange 2px; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    overflow-x: scroll;
+    width: 75%;
 }
 /* 
   ##Device = Desktops
@@ -50,98 +127,26 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 1025px) {
 
     /* CSS */
-    .welcome {
-        display: block;
-        text-align: center;
-        margin: 20px;
-        height: 3%;
+    body::-webkit-scrollbar {
+        width: 11px;
     }
 
-    .summary {
-        width: 50%;
-        font-size: clamp(1px, 8vw, 3rem);
-    }
-
-    .marsimgs {
-        /* width: 50%; */
-        /* border: solid red 2px; */
-        justify-content: center;
-        display: flex;
-        height: 50%;
-        /* background-color: red; */
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
     }
 
 
-    .apod {
-        /* border: solid red 2px; */
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+
+    .weatherdiv{
+        margin: 0 1rem;
     }
 
-    .explain {
-        min-width: 50%;
-    }
 
-    .apodImg {
-        min-width: 50%;
-        margin-left: 2rem;
-    }
 
-    .weather {
-        /* background-color: blue; */
-        text-align: center;
-        padding: 2rem;
-        height: 47%;
-        margin-top: 5px;
-        font-size: clamp(.5rem, 8vw, 2rem);
-    }
 
-    .data {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 3rem;
 
-    }
-
-    .gal {
-        /* border: solid orange 2px; */
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        overflow-x: scroll;
-        width: 50%;
-    }
-
-    .rvrimgs img {
-        max-width: 700px;
-        height: auto;
-        border-radius: 20px;
-
-    }
-
-    .sol {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-        color: white;
-    }
-
-    .cam {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-        color: white;
-    }
-
-    .rvrimgs {
-        position: relative;
-        text-align: center;
-        margin: 0 10px;
-    }
 
 }
 
@@ -154,6 +159,51 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     /* CSS */
+    .weather {
+        /* background-color: blue; */
+        text-align: center;
+        padding: 1rem;
+        height: 47%;
+        margin-top: .5px;
+
+    }
+
+    .weatherdiv{
+        margin: 0 .5rem;
+    }
+
+    .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+
+    }
+
+    .gal {
+        /* border: solid orange 2px; */
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+        overflow-x: scroll;
+        width: 50%;
+    }
+
+
+
+    .sol {
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        color: white;
+    }
+
+    .cam {
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        color: white;
+    }
 
 }
 
@@ -165,6 +215,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
     /* CSS */
+
 
 }
 
