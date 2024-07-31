@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    align-content: center;
+    height: 100%;
+    /* scrollbar-width: thin; */
+    /* scrollbar-color: var(--thumbBG) var(--scrollbarBG); */
+    overflow: hidden;
+    margin: 5px;
+}
+
+html {
+    /* --scrollbarBG: black;
+    --thumbBG: #90A4AE; */
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    background-color: #000;
+    width: 12px;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(.5, #a520ca), color-stop(1, #2681cc));
+    border-radius: 10px;
+}
+
+
+
+#toggleDark{    
+    cursor: pointer;
+} 
+
+.sol {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+}
+
+.cam {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: white;
+}
+
+
+.welcome {
+    display: block;
+    text-align: center;
+    height: 3%;
+}
+    
+.summary {
+        width: 25%;
+        font-size: 1.2vw;
+    }
+.summary h1 {
+    font-size: 6vw;
+}
+
+.marsimgs {
+    /* width: 50%; */
+    /* border: solid red 2px; */
+    justify-content: center;
+    display: flex;
+    height: 50%;
+    /* background-color: red; */
+}
+
+.rvrimgs {
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rvrimgs img {
+    max-width: auto;
+    max-height: auto;
+    border-radius: 20px;
+}
+
+.weather {
+    /* background-color: blue; */
+    text-align: center;
+    padding: 1rem;
+    height: 47%;
+    margin: 1rem;
+    font-size: 1.5vw;
+}
+.weather h1 {
+    font-size: 2vw;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+}
+
+.gal {
+    /* border: solid orange 2px; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    overflow-x: scroll;
+    width: 75%;
+}
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1025px) {
+
+    /* CSS */
+
+
+    .weatherdiv{
+        margin: 0 1rem;
+    }
+
+
+
+
+
+
+}
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* CSS */
+    .weather {
+        /* background-color: blue; */
+        text-align: center;
+        padding: 1rem;
+        height: 47%;
+        margin-top: .5px;
+
+    }
+
+    .weatherdiv{
+        margin: 0 .5rem;
+    }
+
+    .data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+
+    }
+
+    .gal {
+        /* border: solid orange 2px; */
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+        overflow-x: scroll;
+        width: 50%;
+    }
+
+
+
+    .sol {
+        position: absolute;
+        top: 4px;
+        left: 8px;
+        color: white;
+    }
+
+    .cam {
+        position: absolute;
+        top: 4px;
+        right: 8px;
+        color: white;
+    }
+
+}
+
+/* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* CSS */
+
+
+}
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /* CSS */
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    /* CSS */
+
+}

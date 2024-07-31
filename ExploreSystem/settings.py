@@ -33,7 +33,7 @@ SECRET_KEY = os.environ['SECRET_KEY'] # Instead of  actual secret key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['exploremars.us-east-1.elasticbeanstalk.com', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['exploremars.us-east-1.elasticbeanstalk.com', '127.0.0.1:8000', '*']
 
 
 # Application definition
@@ -79,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'exploremars.wsgi.application'
+WSGI_APPLICATION = 'ExploreSystem.wsgi.application'
 
 
 # Data

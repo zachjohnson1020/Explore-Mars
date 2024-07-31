@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30004c4ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/marshome.css' %}">
+</head>
+
+<body>
+
+
+
+
+    <!-- MARS IMAGES -->
+    <div class="marsimgs">
+
+
+        <!-- <h1>Recent Photos From The Curiosity Rover!</h1> -->
+        <div class="summary">
+            <h1>Mars <i class="fa-solid fa-moon fa-sm" id="toggleDark"></i> Rovers</h1> 
+            <p>This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers
+                on Mars and make it more easily available to other developers, educators, and citizen scientists.
+                This API is maintained by Chris Cerami.
+                Each rover has its own set of photos stored in the database, which can be queried separately.</p>
+        </div>
+        <div class="gal">
+            {% for photo in photos %}
+            <div class="rvrimgs">
+                <img src={{photo.img_src}}>
+                <p class="sol">SOL {{photo.sol}}</p>
+                <p class="cam">{{photo.camera.full_name}}</p>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--^^^^ MARS IMAGES ^^^^-->
+
+
+
+
+    <!-- WEATHER  -->
+    <div class="weather">
+
+        <h1>Weather Info:</h1>
+        <h2>Most recent 7 Sols </h2><br>
+        <div class="data">
+            {% for sol in weather %}
+            <div class="weatherdiv">
+                <div class="weatherinfo">
+                    <h3>Sol:{{sol.sol}}</h3>
+                    <p>Earth Date: {{sol.terrestrial_date}}</p>
+                    <p>Max Temp: {{sol.max_temp}} C</p>
+                    <p>Min Temp: {{sol.min_temp}} C</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--^^^^ WEATHER ^^^^ -->
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+    <script>
+
+
+
+
+
+        // DARK MODE
+
+        // DARK MODE
+
+        const toggle = document.getElementById('toggleDark');
+        const body = document.querySelector('body');
+	
+
+        toggle.addEventListener('click', function() {
+            this.classList.toggle('fa-moon');
+            if (this.classList.toggle('fa-sun')) {
+                body.style.backgroundColor = 'black'; //black
+		body.style.color = 'white';
+                body.style.transition = '2s';
+
+
+            } else {
+                body.style.backgroundColor = 'white';
+		body.style.color = 'black';
+                body.style.transition = '2s';
+
+            }
+
+
+
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>
